@@ -38,6 +38,12 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "dotenv"
 end
 
-
+# auth gems
+gem "doorkeeper"
+gem "doorkeeper-jwt"
+gem "devise"
+gem "jwt"
