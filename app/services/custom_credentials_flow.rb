@@ -40,8 +40,8 @@ module CustomCredentialsFlow
     end
 
     def valid_credentials?
-      verifier = RemoteTokenVerifier.new(jwt_token)
-      decoded_jwt_token && verifier.valid? && find_or_initialize_user
+      verifier = RemoteTokenVerifier.new(@client, jwt_token)
+      !!decoded_jwt_token && verifier.valid? && !!find_or_initialize_user
     end
 
     def create_token

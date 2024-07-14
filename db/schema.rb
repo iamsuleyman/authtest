@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_07_14_063322) do
+ActiveRecord::Schema[7.2].define(version: 2024_07_14_112332) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,6 +53,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_07_14_063322) do
     t.boolean "confidential", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "app_uri"
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
