@@ -24,8 +24,6 @@ Doorkeeper.configure do
    access_token_expires_in 2.hours
    use_refresh_token
 
-  access_token_generator "::Doorkeeper::JWT"
-
-
   grant_flows %w[authorization_code client_credentials password custom_credentials]
+  reuse_access_token
 end
